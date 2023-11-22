@@ -75,7 +75,8 @@ public function _toString() :string {
     {
         return array(
             "titel"     => $this->name,
-            "gameName"  => $this->videogamename,
+            "videogameName"  => $this->videogamename,
+            "releaseyear" => $this->releaseyear,
             "songs"     => $this->tracklist
         );
     }
