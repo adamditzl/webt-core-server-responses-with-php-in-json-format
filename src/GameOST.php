@@ -63,7 +63,7 @@ private array $tracklist;
         return $this->tracklist;
     }
 
-public function _toString() :string {
+public function __toString() :string {
     return "Titel: " . $this->name
     . "<br> Titel des Videospiels: " . $this->videogamename
     . "<br> Veröffentlichungsjahr: " . $this->releaseyear
