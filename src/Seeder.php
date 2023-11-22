@@ -33,7 +33,7 @@ class Seeder
         $OST3songs[2] = new Song(3, "Beneath the Mask", "Lyn",3,277);
         $OST3songs[3] = new Song(4, "Tokyo Daylight", "Lyn",4,124);
 
-        $OSTs[2] = new GameOST(1, "Original Soundtrack", "Persona5", 2016, $OST3songs);
+        $OSTs[2] = new GameOST(1, "Original Soundtrack", "Persona5", 2017, $OST3songs);
 
         return $OSTs;
     }
