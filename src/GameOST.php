@@ -63,21 +63,13 @@ private array $tracklist;
         return $this->tracklist;
     }
 
-public function __toString() :string {
-    return "Titel: " . $this->name
-    . "<br> Titel des Videospiels: " . $this->videogamename
-    . "<br> Veröffentlichungsjahr: " . $this->releaseyear
-    . "<br> Songs: " . implode(", ", $this->tracklist);
-
-}
-
     public function jsonSerialize(): mixed
     {
         return array(
-            "titel"     => $this->name,
-            "videogameName"  => $this->videogamename,
-            "releaseyear" => $this->releaseyear,
-            "songs"     => $this->tracklist
+            "Titel des Albums: "     => $this->name,
+            "Name des Videospiels: "  => $this->videogamename,
+            "Veröffentlichungsjahr: " => $this->releaseyear,
+            "Im Album enthaltene Lieder: "     => $this->tracklist
         );
     }
 }

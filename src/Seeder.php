@@ -23,7 +23,7 @@ class Seeder
         $OST2songs[2] = new Song(3, "A Stranger I Remain - Maniac Agenda Mix", "Free Dominguez",3,145);
         $OST2songs[3] = new Song(4, "It Has To Be This Way - Platnium Mix", "Jimmy Gnecco",4,72);
 
-        $OSTs[1] = new GameOST(1, "Vocal Tracks Selection", "METAL GEAR RISING REVENGANCE", 2013, $OST2songs);
+        $OSTs[1] = new GameOST(2, "Vocal Tracks Selection", "METAL GEAR RISING REVENGANCE", 2013, $OST2songs);
 
 
         $OST3songs = [];
@@ -33,7 +33,7 @@ class Seeder
         $OST3songs[2] = new Song(3, "Beneath the Mask", "Lyn",3,277);
         $OST3songs[3] = new Song(4, "Tokyo Daylight", "Lyn",4,124);
 
-        $OSTs[2] = new GameOST(1, "Original Soundtrack", "Persona5", 2017, $OST3songs);
+        $OSTs[2] = new GameOST(3, "Original Soundtrack", "Persona5", 2017, $OST3songs);
 
         return $OSTs;
     }

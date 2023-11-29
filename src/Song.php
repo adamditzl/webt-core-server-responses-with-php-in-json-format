@@ -66,18 +66,11 @@ class Song implements JsonSerializable
         return $this->duration;
     }
 
-
-    public function __toString(): string{
-        return "Titel des Lieds: " . $this->name
-            . "<br> Name des Interpreten: " . $this->artist
-            . "<br> Dauer des Lieds: " . $this->duration . "s";
-    }
-
     public function jsonSerialize(): mixed {
         return array(
-            "title" => $this->name,
-            "artist" => $this->artist,
-            "duration" => $this->duration
+            "Titel des Lieds: " => $this->name,
+            "Interpret: " => $this->artist,
+            "Dauer des Lieds: " => $this->duration
         );
     }
 

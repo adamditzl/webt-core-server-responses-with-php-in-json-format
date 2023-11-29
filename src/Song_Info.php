@@ -4,7 +4,10 @@ require_once "GameOST.php";
 require_once "Song.php";
 
 if(isset($_GET["song-id"]) and $_GET["song-id"] >= 0 and $_GET["song-id"] <= 3) {
-    echo json_encode(Seeder::createMockData()[0]->getTracklist()[$_GET["song-id"]]);
+    if(isset($_GET["ost-id"]) and $_GET["ost-id"] >= 0 and $_GET["ost-id"] <= 2) {
+    echo json_encode(Seeder::createMockData()[$_GET["ost-id"]]->getTracklist()[$_GET["song-id"]]);
+    } else{
+        echo "Es ist eine falsche OST-ID angegeben";
+    }
 } else {
-    echo '{ "status": "Error" }';
-}
+    echo "Es ist eine falsche Song-ID angegeben"; }
